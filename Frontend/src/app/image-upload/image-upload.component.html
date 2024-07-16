@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="file-upload-container">
+    <input type="file" id="fileInput" (change)="onFileSelected($event)" accept=".jpg, .jpeg, .png" />
+    <label for="fileInput" class="file-label">Choose Invoice Image</label>
+    <button *ngIf="!responseData" (click)="onUpload()" class="upload-button">
+      <span *ngIf="!uploading">Upload</span>
+      <mat-spinner diameter="20" *ngIf="uploading"></mat-spinner>
+    </button>
+    <button *ngIf="responseArray.length > 0" (click)="downloadAllResponses()" class="download-button">
+      Download All Responses ({{ responseArray.length }})
+    </button>
+    <span class="accuracy-label" *ngIf="responseData && responseData.accuracy">Completeness:</span>
+    <span class="accuracy-level" *ngIf="responseData && responseData.accuracy">{{ responseData.accuracy }}%</span>
+  </div>
+  
+</div>
+<div class="boxes">
+  <div class="box image-box" *ngIf="imageSrc">
+    <div class="image-container" *ngIf="imageSrc">
+      <div class="zoom">
+        <img [src]="imageSrc" alt="Image preview" />
+      </div>
+    </div>
+  </div>
+  <div class="box form-box" *ngIf="responseData">
+    <app-display-edit-form [data]="responseData" (submitData)="onSubmitData($event)"></app-display-edit-form>
+    <button *ngIf="responseArray.length > 0" (click)="downloadSingleResponse()" class="download-button">Download Invoice Response</button>
+  </div>
+</div>

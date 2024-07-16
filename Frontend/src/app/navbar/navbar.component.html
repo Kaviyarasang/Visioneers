@@ -1,0 +1,22 @@
+<div class="navbar row">
+  <div class="col-6 brand-container">
+    <div class="navbar-brand">
+      <img src="https://s7d9.scene7.com/is/content/upsprod/Logo" alt="Logo" style="max-height: 25px;">
+      Invoice Decoder App -
+    </div>
+  </div>
+  <div class="col-6 contributors-container">
+    <div class="contributors-menu">
+      <button mat-icon-button [matMenuTriggerFor]="contributorsMenu" class="contributors-button">
+        <mat-icon>people</mat-icon>
+        <span class="contributors-text">Contributors</span>
+      </button>
+      <mat-menu #contributorsMenu="matMenu" class="custom-menu">
+        <button mat-menu-item *ngFor="let contributor of contributors" class="custom-menu-item">
+          <mat-icon>{{ contributor.icon }}</mat-icon>
+          <span>{{ contributor.name }}</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</div>

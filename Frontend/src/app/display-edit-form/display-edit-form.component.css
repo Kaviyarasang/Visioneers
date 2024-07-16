@@ -1,0 +1,71 @@
+.custom-form {
+  width: 100%;
+}
+
+.invoice-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.invoice-header h2 {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form-group.col-md-6 {
+  width: 50%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.is-invalid {
+  border-color: red;
+}
+
+.text-danger {
+  color: red;
+}
+

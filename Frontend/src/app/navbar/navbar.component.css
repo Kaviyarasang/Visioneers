@@ -1,0 +1,41 @@
+.navbar {
+  background-color: rgb(51,0,0);
+  color: white;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+  align-items: center; /* Align items vertically in the center */
+  font-size: 1.5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  display: flex; /* Ensure flexbox properties apply */
+  align-items: center; /* Center align items vertically within navbar-brand */
+}
+
+.navbar-brand img {
+  max-height: 40px; /* Adjust size as needed */
+  margin-right: 10px; /* Add space between logo and text */
+}
+
+
+.custom-menu-item {
+height: 33px;
+}
+
+.contributors-button {
+  font-size: 10px;
+  margin-left: 8px;
+  color: rgb(213, 213, 213);
+}
+
+.contributors-text {
+  margin-left: 4px;
+}
+
+
+
